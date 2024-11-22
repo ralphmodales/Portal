@@ -49,10 +49,10 @@ export default function About() {
             </div>
           </div>
 
-          <div className="py-20 grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="py-12 md:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member) => (
-              <Card key={member.name} className="border-none shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-0">
+              <Card key={member.name} className="border-none shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+                <CardContent className="p-0 flex flex-col h-full">
                   <div className="aspect-square relative overflow-hidden rounded-t-lg">
                     <Image
                       src={member.image}
@@ -61,10 +61,10 @@ export default function About() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="p-6 flex flex-col h-[200px]">
-                    <h3 className="text-xl font-semibold text-zinc-900 mb-1">{member.name}</h3>
-                    <p className="text-sm text-zinc-600 mb-3">{member.role}</p>
-                    <p className="text-sm text-zinc-500 mb-4 flex-grow">{member.description}</p>
+                  <div className="p-4 sm:p-6 flex flex-col flex-grow">
+                    <h3 className="text-lg sm:text-xl font-semibold text-zinc-900 mb-1">{member.name}</h3>
+                    <p className="text-sm text-zinc-600 mb-2">{member.role}</p>
+                    <p className="text-sm text-zinc-500 mb-4 flex-grow line-clamp-3 sm:line-clamp-4">{member.description}</p>
                     {member.social && (
                       <div className="flex gap-2 mt-auto">
                         {member.social.github && (
