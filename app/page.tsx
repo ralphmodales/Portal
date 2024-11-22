@@ -16,18 +16,27 @@ const features = [
 export default function Home() {
   return (
     <main className="flex-1">
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-white overflow-hidden">
-        <div className="container px-4 md:px-6 mx-auto relative z-20">
-          <div className="flex flex-col items-start space-y-4 text-left">
+      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-white overflow-hidden relative">
+        <div
+          className="absolute inset-0 z-0 top-10 rounded-xl"
+          style={{
+            backgroundImage: "url('/wave.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        <div className="container mx-auto relative z-20">
+          <div className="flex flex-col items-start space-y-4 text-left px-4">
             <div className="space-y-2 max-w-[700px]">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-black">
-                Welcome to the Company Systems
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
+                Welcome to the Popeyes Systems
               </h1>
-              <p className="text-gray-700 md:text-md">Effortlessly manage leave and streamline incident reporting with Popeyes' advanced system—simplifying tracking, approvals, and analysis for smooth operations.</p>
+              <p className="text-gray-100 md:text-md">Effortlessly manage leave and streamline incident reporting with Popeyes' advanced system—simplifying tracking, approvals, and analysis for smooth operations.</p>
             </div>
             <div className="flex space-x-4">
               <a href="/systems">
-                <Button>Get Started</Button>
+                <Button className="bg-white text-black hover:bg-black hover:text-white">Get Started</Button>
               </a>
             </div>
           </div>
