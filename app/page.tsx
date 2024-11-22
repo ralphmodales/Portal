@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import * as React from "react"
 
 const contents = [
   { name: '', path: "https://media.gettyimages.com/id/1961001965/video/4k-soft-wave-background-loopable.jpg?s=640x640&k=20&c=dC80tjikDexdp4tWiednddY93AXmpzl72Fzp0N3ZyT4=" },
@@ -7,10 +8,31 @@ const contents = [
 ]
 
 const features = [
-  { title: 'Efficient Leave Management', content: "" },
-  { title: 'Efficient Leave Management', content: "" },
-  { title: 'Efficient Leave Management', content: "" },
-]
+  { 
+    title: 'Efficient Leave Management', 
+    content: "Submit, review, and approve leave requests with ease.",
+    imageSrc: "https://wallpaperaccess.com/full/8642986.gif",
+    order: 1
+  },
+  { 
+    title: 'Streamlined Incident Reporting', 
+    content: "Quickly log and track incidents to ensure timely resolutions.",
+    imageSrc: "https://media1.giphy.com/media/3ohs7J2aQBUeZmMtfG/200.gif?cid=6c09b952f6vxnshzdbmx4nb2j4rivgujnz9rtkorzchulon0&ep=v1_internal_gif_by_id&rid=200.gif&ct=g",
+    order: 2
+  },
+  { 
+    title: 'Centralized Asset Management', 
+    content: "Monitor and manage all your assets from a platform.",
+    imageSrc: "https://i.imgur.com/QS9fsMA.gif",
+    order: 3
+  },
+  { 
+    title: 'Convenient Food Ordering', 
+    content: "Order meals directly from the platform for hassle-free dining solutions.",
+    imageSrc: "https://i.pinimg.com/originals/cc/73/81/cc73813f50a02b766ea5ad4e07cd5433.gif",
+    order: 4
+  }
+];
 
 
 export default function Home() {
@@ -66,38 +88,40 @@ export default function Home() {
             Key Features
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
-            <div className="relative w-full rounded-lg shadow-lg overflow-hidden md:order-1">
-              <img src="https://wallpaperaccess.com/full/8642986.gif"
-                className="rounded-lg w-full h-auto" alt="GIF" width="800" height="600" />
-            </div>
-            <div className="text-left space-y-4 md:order-2">
-              <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl text-black">Efficient Leave Management</h3>
-              <p className="text-black text-xl font-light">Submit, review, and approve leave requests with ease.</p>
-            </div>
-            <div className="text-left space-y-4 md:order-3">
-              <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl text-black">Efficient Leave Management</h3>
-              <p className="text-gray-600 text-xl">Submit, review, and approve leave requests with ease.</p>
-            </div>
-            <div className="relative w-full rounded-lg shadow-lg overflow-hidden md:order-4">
-              <img src="https://wallpaperaccess.com/full/8642986.gif"
-                className="rounded-lg w-full h-auto" alt="GIF" width="800" height="600" />
-            </div>
-            <div className="relative w-full rounded-lg shadow-lg overflow-hidden md:order-5">
-              <img src="https://wallpaperaccess.com/full/8642986.gif"
-                className="rounded-lg w-full h-auto" alt="GIF" width="800" height="600" />
-            </div>
-            <div className="text-left space-y-4 md:order-6">
-              <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl text-black">Efficient Leave Management</h3>
-              <p className="text-gray-600 text-xl">Submit, review, and approve leave requests with ease.</p>
-            </div>
-            <div className="text-left space-y-4 md:order-7">
-              <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl text-black">Efficient Leave Management</h3>
-              <p className="text-gray-600 text-xl">Submit, review, and approve leave requests with ease.</p>
-            </div>
-            <div className="relative w-full rounded-lg shadow-lg overflow-hidden md:order-8">
-              <img src="https://wallpaperaccess.com/full/8642986.gif"
-                className="rounded-lg w-full h-auto" alt="GIF" width="800" height="600" />
-            </div>
+            {features
+              .sort((a, b) => a.order - b.order)
+              .map((feature, index) => (
+                <React.Fragment key={index}>
+                  {index % 2 === 0 ? (
+                    <div className="relative w-full rounded-lg shadow-lg overflow-hidden">
+                      <img 
+                        src={feature.imageSrc}
+                        className="rounded-lg w-full h-auto" 
+                        alt="Feature" 
+                        width="800" 
+                        height="600" 
+                      />
+                    </div>
+                  ) : null}
+                  <div className="text-left space-y-4">
+                    <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl text-black">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 text-xl">{feature.content}</p>
+                  </div>
+                  {index % 2 === 1 ? (
+                    <div className="relative w-full rounded-lg shadow-lg overflow-hidden">
+                      <img 
+                        src={feature.imageSrc}
+                        className="rounded-lg w-full h-auto" 
+                        alt="Feature" 
+                        width="800" 
+                        height="600" 
+                      />
+                    </div>
+                  ) : null}
+                </React.Fragment>
+              ))}
           </div>
         </div>
       </section> 
