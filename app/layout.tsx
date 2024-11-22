@@ -11,8 +11,8 @@ const appleFont = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Popeyes System",
-  description: "Created with Niggers.js",
+  title: "Portal",
+  description: "Landing Page",
 }
 
 export default function RootLayout({

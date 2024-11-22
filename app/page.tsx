@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 
 const contents = [
   { name: '', path: "https://media.gettyimages.com/id/1961001965/video/4k-soft-wave-background-loopable.jpg?s=640x640&k=20&c=dC80tjikDexdp4tWiednddY93AXmpzl72Fzp0N3ZyT4=" },
-  { name: 'Report Incident', path: "https://i.redd.it/gch9nryt2gnd1.jpeg" },
-  { name: 'Landing Page', path: "https://sukuna.co.uk/wp-content/uploads/2024/06/sukuna-manga-panel.jpg" },
+  { name: '', path: "https://png.pngtree.com/thumb_back/fh260/background/20230616/pngtree-white-abstract-wave-background-in-3d-rendering-with-a-rippled-cloth-image_3619171.jpg" },
+  { name: '', path: "https://sukuna.co.uk/wp-content/uploads/2024/06/sukuna-manga-panel.jpg" },
 ]
 
 const features = [
