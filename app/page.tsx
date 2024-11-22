@@ -42,8 +42,8 @@ export default function Home() {
             <p className="text-black text-md font-light">Take control of leave tracking and incident reporting with Popeyes' smart system. Designed to enhance efficiency and decision-making, it's your all-in-one tool for smooth operations.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-2">
-            {contents.map((item) => (
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            {contents.map((item, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="relative w-full aspect-square">
                   <img src={item.path}
                     className="w-full h-full object-cover" />
@@ -100,14 +100,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <footer className="w-full py-6 bg-white border-t border-black">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm">© 2024 Popeyes Philippines. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      </section> 
     </main>
   );
 }

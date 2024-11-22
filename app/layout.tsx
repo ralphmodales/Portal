@@ -27,9 +27,16 @@ export default function RootLayout({
           <Navbar />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {children}
+            <footer className="w-full py-6 bg-white border-t border-black">
+              <div className="container px-4 md:px-6 mx-auto">
+                <div className="flex flex-col md:flex-row justify-between items-center">
+                <p className="text-sm">© 2024 Popeyes Philippines. All rights reserved.</p>
+              </div>
+            </div>
+            </footer> 
           </div>
         </div>
-      </body>
+        </body>
     </html>
   );
 }
