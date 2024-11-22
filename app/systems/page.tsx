@@ -70,7 +70,7 @@ export default function Systems() {
     {
       title: "IT Asset Management",
       description: "Track and optimize your organization's technology resources",
-      imageUrl: "https://pbs.twimg.com/media/FjaTHBPXEAAAlqe?format=jpg&name=4096x4096", 
+      imageUrl: "/placeholder.svg?height=900&width=1600", 
       link: "/systems/neural-networks"
     }
   ]
