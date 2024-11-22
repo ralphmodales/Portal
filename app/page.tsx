@@ -6,6 +6,12 @@ const contents = [
   { name: 'Landing Page', path: "https://sukuna.co.uk/wp-content/uploads/2024/06/sukuna-manga-panel.jpg" },
 ]
 
+const features = [
+  { title: 'Efficient Leave Management', content: "" },
+  { title: 'Efficient Leave Management', content: "" },
+  { title: 'Efficient Leave Management', content: "" },
+]
+
 
 export default function Home() {
   return (
@@ -68,9 +74,36 @@ export default function Home() {
               <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl text-black">Efficient Leave Management</h3>
               <p className="text-gray-600 text-xl">Submit, review, and approve leave requests with ease.</p>
             </div>
+            <div className="text-left space-y-4 md:order-3">
+              <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl text-black">Efficient Leave Management</h3>
+              <p className="text-gray-600 text-xl">Submit, review, and approve leave requests with ease.</p>
+            </div>
+            <div className="relative w-full rounded-lg shadow-lg overflow-hidden md:order-4">
+              <img src="https://wallpaperaccess.com/full/8642986.gif"
+                className="rounded-lg w-full h-auto" alt="GIF" width="800" height="600" />
+            </div>
+            <div className="relative w-full rounded-lg shadow-lg overflow-hidden md:order-5">
+              <img src="https://wallpaperaccess.com/full/8642986.gif"
+                className="rounded-lg w-full h-auto" alt="GIF" width="800" height="600" />
+            </div>
+            <div className="text-left space-y-4 md:order-6">
+              <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl text-black">Efficient Leave Management</h3>
+              <p className="text-gray-600 text-xl">Submit, review, and approve leave requests with ease.</p>
+            </div>
+            <div className="text-left space-y-4 md:order-7">
+              <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl text-black">Efficient Leave Management</h3>
+              <p className="text-gray-600 text-xl">Submit, review, and approve leave requests with ease.</p>
+            </div>
+            <div className="relative w-full rounded-lg shadow-lg overflow-hidden md:order-8">
+              <img src="https://wallpaperaccess.com/full/8642986.gif"
+                className="rounded-lg w-full h-auto" alt="GIF" width="800" height="600" />
+            </div>
           </div>
         </div>
       </section>
+      <footer className="h-40">
+        Hello
+      </footer>
     </main>
   );
 }
