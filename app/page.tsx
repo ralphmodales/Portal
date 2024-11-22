@@ -101,8 +101,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="h-40">
-        Hello
+      <footer className="w-full py-6 bg-white border-t border-black">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-sm">© 2024 Popeyes Philippines. All rights reserved.</p>
+          </div>
+        </div>
       </footer>
     </main>
   );

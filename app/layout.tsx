@@ -3,21 +3,16 @@ import localFont from "next/font/local"
 import { Navbar } from "@/components/navbar"
 import "./globals.css"
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const appleFont = localFont({
+  src: "./fonts/SF-Pro.ttf",
+  variable: "--font-sf-pro",
   weight: "100 900",
-})
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: "Landing Page",
-  description: "Created with Next.js",
+  title: "Popeyes System",
+  description: "Created with Niggers.js",
 }
 
 export default function RootLayout({
@@ -27,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${appleFont.variable} antialiased`}>
         <div className="min-h-screen">
           <Navbar />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
