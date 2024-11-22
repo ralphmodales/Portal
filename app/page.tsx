@@ -1,5 +1,12 @@
 import { Button } from "@/components/ui/button";
 
+const contents = [
+  { name: 'Monitor Leaves', path: "https://i.pinimg.com/originals/7a/88/2a/7a882ab5c4fba435f0c93f44ab461420.jpg" },
+  { name: 'Report Incident', path: "https://i.redd.it/gch9nryt2gnd1.jpeg" },
+  { name: 'Landing Page', path: "https://sukuna.co.uk/wp-content/uploads/2024/06/sukuna-manga-panel.jpg" },
+]
+
+
 export default function Home() {
   return (
     <main className="flex-1">
@@ -29,45 +36,21 @@ export default function Home() {
             <p className="text-gray-600 text-lg">Take control of leave tracking and incident reporting with Popeyes' smart system. Designed to enhance efficiency and decision-making, it's your all-in-one tool for smooth operations.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-2">
-            <div className="bg-white rounder-lg shadow-lg overflow-hidden">
-              <div className="relative w-full aspect-square">
-                <img src="https://i.pinimg.com/originals/7a/88/2a/7a882ab5c4fba435f0c93f44ab461420.jpg"
-                  className="w-full h-full object-cover" />
-                <div className="absolute inset-0 flex items-end">
-                  <div className="w-full h-1/5 bg-gradient-to-t from-white/60 via-white/30 to- backdrop-blur-[10px]">
-                    <div className="absolute bottom-0 w-full p-4">
-                      <h3 className="text-2xl text-zinc-700 font-semibold">Monitor Leaves</h3>
+            {contents.map((item) => (
+              <div className="bg-white rounder-lg shadow-lg overflow-hidden">
+                <div className="relative w-full aspect-square">
+                  <img src={item.path}
+                    className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 flex items-end">
+                    <div className="w-full h-1/5 bg-gradient-to-t from-white/60 via-white/30 to- backdrop-blur-[10px]">
+                      <div className="absolute bottom-0 w-full p-4">
+                        <h3 className="text-2xl text-zinc-700 font-semibold">{item.name}</h3>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="bg-white rounder-lg shadow-lg overflow-hidden">
-              <div className="relative w-full aspect-square">
-                <img src="https://i.pinimg.com/originals/7a/88/2a/7a882ab5c4fba435f0c93f44ab461420.jpg"
-                  className="w-full h-full object-cover" />
-                <div className="absolute inset-0 flex items-end">
-                  <div className="w-full h-1/5 bg-gradient-to-t from-white/60 via-white/30 to- backdrop-blur-[10px]">
-                    <div className="absolute bottom-0 w-full p-4">
-                      <h3 className="text-2xl text-zinc-700 font-semibold">Monitor Leaves</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounder-lg shadow-lg overflow-hidden">
-              <div className="relative w-full aspect-square">
-                <img src="https://i.pinimg.com/originals/7a/88/2a/7a882ab5c4fba435f0c93f44ab461420.jpg"
-                  className="w-full h-full object-cover" />
-                <div className="absolute inset-0 flex items-end">
-                  <div className="w-full h-1/5 bg-gradient-to-t from-white/60 via-white/30 to- backdrop-blur-[10px]">
-                    <div className="absolute bottom-0 w-full p-4">
-                      <h3 className="text-2xl text-zinc-700 font-semibold">Monitor Leaves</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -83,7 +66,7 @@ export default function Home() {
             </div>
             <div className="text-left space-y-4 md:order-2">
               <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl text-black">Efficient Leave Management</h3>
-
+              <p className="text-gray-600 text-xl">Submit, review, and approve leave requests with ease.</p>
             </div>
           </div>
         </div>
