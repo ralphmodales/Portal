@@ -4,7 +4,7 @@ import { Navbar } from "@/components/navbar"
 import "./globals.css"
 
 const appleFont = localFont({
-  src: "./fonts/SF-Pro.ttf",
+  src: "./fonts/SF-Pro.woff2",
   variable: "--font-sf-pro",
   weight: "100 900",
   display: 'swap',
