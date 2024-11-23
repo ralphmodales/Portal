@@ -7,31 +7,31 @@ import { motion } from "framer-motion"
 const contents = [
   { name: '', path: "https://media.gettyimages.com/id/1961001965/video/4k-soft-wave-background-loopable.jpg?s=640x640&k=20&c=dC80tjikDexdp4tWiednddY93AXmpzl72Fzp0N3ZyT4=" },
   { name: '', path: "https://png.pngtree.com/thumb_back/fh260/background/20230616/pngtree-white-abstract-wave-background-in-3d-rendering-with-a-rippled-cloth-image_3619171.jpg" },
-  { name: '', path: "https://sukuna.co.uk/wp-content/uploads/2024/06/sukuna-manga-panel.jpg" },
+  { name: '', path: "/wave.jpg" },
 ]
 
 const features = [
   { 
-    title: 'Efficient Leave Management', 
-    content: "Submit, review, and approve leave requests with ease.",
+    title: 'Comprehensive Leave Management', 
+    content: "Access and manage employee leave requests across all Popeyes Philippines locations.",
     imageSrc: "https://wallpaperaccess.com/full/8642986.gif",
     order: 1
   },
   { 
-    title: 'Streamlined Incident Reporting', 
-    content: "Quickly log and track incidents to ensure timely resolutions.",
+    title: 'Integrated Incident Reporting', 
+    content: "Centralize incident logging and tracking for all Popeyes Philippines branches.",
     imageSrc: "https://media1.giphy.com/media/3ohs7J2aQBUeZmMtfG/200.gif?cid=6c09b952f6vxnshzdbmx4nb2j4rivgujnz9rtkorzchulon0&ep=v1_internal_gif_by_id&rid=200.gif&ct=g",
     order: 2
   },
   { 
-    title: 'Centralized Asset Management', 
-    content: "Monitor and manage all your assets from a platform.",
+    title: 'Unified Asset Management', 
+    content: "Monitor and manage assets across all Popeyes Philippines systems from a single platform.",
     imageSrc: "https://i.imgur.com/QS9fsMA.gif",
     order: 3
   },
   { 
-    title: 'Convenient Food Ordering', 
-    content: "Order meals directly from the platform for hassle-free dining solutions.",
+    title: 'Streamlined Food Ordering', 
+    content: "Coordinate food orders across all Popeyes Philippines locations through our integrated system.",
     imageSrc: "https://i.pinimg.com/originals/cc/73/81/cc73813f50a02b766ea5ad4e07cd5433.gif",
     order: 4
   }
@@ -75,13 +75,13 @@ export default function Home() {
           >
             <motion.div className="space-y-2 max-w-[700px]" variants={fadeInUp}>
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-black">
-                Welcome to the Company Systems
+                Popeyes Philippines Systems Portal
               </h1>
-              <p className="text-black md:text-md font-light">Effortlessly manage leave and streamline incident reporting with Popeyes' advanced system—simplifying tracking, approvals, and analysis for smooth operations.</p>
+              <p className="text-black md:text-md font-light">Your gateway to all Popeyes Philippines management systems—streamlining operations, enhancing efficiency, and unifying our processes across all locations.</p>
             </motion.div>
             <motion.div className="flex space-x-4" variants={fadeInUp}>
               <a href="/systems">
-                <Button className="bg-black text-white hover:bg-black hover:text-white rounded-2xl" size="lg">Get Started</Button>
+                <Button className="bg-black text-white hover:bg-black hover:text-white rounded-2xl" size="lg">Access Systems</Button>
               </a>
             </motion.div>
           </motion.div>
@@ -103,13 +103,13 @@ export default function Home() {
               className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black"
               variants={fadeInUp}
             >
-              Simplify Your Workforce Management
+              Unified Management Systems
             </motion.h2>
             <motion.p 
               className="text-black text-md font-light"
               variants={fadeInUp}
             >
-              Take control of leave tracking and incident reporting with Popeyes' smart system. Designed to enhance efficiency and decision-making, it's your all-in-one tool for smooth operations.
+              Access all Popeyes Philippines management tools in one place. From leave tracking to incident reporting, our integrated portal enhances efficiency and decision-making across all locations.
             </motion.p>
           </motion.div>
           <motion.div 
@@ -151,7 +151,7 @@ export default function Home() {
             className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black mb-12 text-center"
             variants={fadeInUp}
           >
-            Key Features
+            Integrated Systems
           </motion.h2>
           <motion.div 
             className="grid md:grid-cols-2 gap-12 items-center mb-24"
