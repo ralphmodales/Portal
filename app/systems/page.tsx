@@ -236,10 +236,10 @@ export default function Systems() {
                 <div className="mt-8">
                   <Link href={system.link}>
                     <div className="flex items-center justify-between group cursor-pointer">
-                      <span className="text-sm font-medium">
+                      <span className="text-xs font-medium">
                         Visit System
                       </span>
-                      <ArrowUpRight className="h-5 w-5 text-black opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <ArrowUpRight className="h-4 w-4 text-black opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
                   </Link>
                 </div>
