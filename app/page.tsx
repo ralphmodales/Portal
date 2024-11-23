@@ -1,5 +1,8 @@
+'use client'
+
 import { Button } from "@/components/ui/button";
 import * as React from "react"
+import { motion } from "framer-motion"
 
 const contents = [
   { name: '', path: "https://media.gettyimages.com/id/1961001965/video/4k-soft-wave-background-loopable.jpg?s=640x640&k=20&c=dC80tjikDexdp4tWiednddY93AXmpzl72Fzp0N3ZyT4=" },
@@ -34,38 +37,92 @@ const features = [
   }
 ];
 
+const fadeInUp = {
+  initial: { opacity: 0, y: 10 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8, ease: [0.34, 1.56, 0.64, 1] }
+};
+
+const staggerChildren = {
+  animate: { transition: { staggerChildren: 0.2 } }
+};
+
+const hoverScale = {
+  whileHover: { scale: 1.02 },
+  whileTap: { scale: 0.98 },
+  transition: { duration: 0.3, ease: "easeInOut" }
+};
 
 export default function Home() {
   return (
-    <main className="flex-1">
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-white overflow-hidden relative">
+    <motion.main 
+      className="flex-1"
+      initial="initial"
+      animate="animate"
+      variants={staggerChildren}
+    >
+      <motion.section 
+        className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-white overflow-hidden relative"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        variants={fadeInUp}
+      >
         <div className="container mx-auto relative z-20">
-          <div className="flex flex-col items-start space-y-4 text-left px-4">
-            <div className="space-y-2 max-w-[700px]">
+          <motion.div 
+            className="flex flex-col items-start space-y-4 text-left px-4"
+            variants={staggerChildren}
+          >
+            <motion.div className="space-y-2 max-w-[700px]" variants={fadeInUp}>
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-black">
                 Welcome to the Company Systems
               </h1>
               <p className="text-black md:text-md font-light">Effortlessly manage leave and streamline incident reporting with Popeyes' advanced system—simplifying tracking, approvals, and analysis for smooth operations.</p>
-            </div>
-            <div className="flex space-x-4">
+            </motion.div>
+            <motion.div className="flex space-x-4" variants={fadeInUp}>
               <a href="/systems">
                 <Button className="bg-black text-white hover:bg-black hover:text-white rounded-2xl" size="lg">Get Started</Button>
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
-      </section>
-      <section className="w-full py-12 md:py-24 lg:py-32 relatize z-20">
+      </motion.section>
+      <motion.section 
+        className="w-full py-12 md:py-24 lg:py-32 relative z-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        variants={fadeInUp}
+      >
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black">
+          <motion.div 
+            className="grid md:grid-cols-2 gap-12 items-center mb-12"
+            variants={staggerChildren}
+          >
+            <motion.h2 
+              className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black"
+              variants={fadeInUp}
+            >
               Simplify Your Workforce Management
-            </h2>
-            <p className="text-black text-md font-light">Take control of leave tracking and incident reporting with Popeyes' smart system. Designed to enhance efficiency and decision-making, it's your all-in-one tool for smooth operations.</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-2">
+            </motion.h2>
+            <motion.p 
+              className="text-black text-md font-light"
+              variants={fadeInUp}
+            >
+              Take control of leave tracking and incident reporting with Popeyes' smart system. Designed to enhance efficiency and decision-making, it's your all-in-one tool for smooth operations.
+            </motion.p>
+          </motion.div>
+          <motion.div 
+            className="grid md:grid-cols-3 gap-2"
+            variants={staggerChildren}
+          >
             {contents.map((item, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <motion.div 
+                key={index} 
+                className="bg-white rounded-lg shadow-lg overflow-hidden"
+                variants={fadeInUp}
+                {...hoverScale}
+              >
                 <div className="relative w-full aspect-square">
                   <img src={item.path}
                     className="w-full h-full object-cover" />
@@ -77,23 +134,45 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
-      <section className="w-full py-12 md:py-24 lg:py-32 relative z-20">
+      </motion.section>
+      <motion.section 
+        className="w-full py-12 md:py-24 lg:py-32 relative z-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        variants={fadeInUp}
+      >
         <div className="container px-4 md:px-6 mx-auto">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black mb-12 text-center">
+          <motion.h2 
+            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black mb-12 text-center"
+            variants={fadeInUp}
+          >
             Key Features
-          </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
+          </motion.h2>
+          <motion.div 
+            className="grid md:grid-cols-2 gap-12 items-center mb-24"
+            variants={staggerChildren}
+          >
             {features
               .sort((a, b) => a.order - b.order)
               .map((feature, index) => (
                 <React.Fragment key={index}>
                   {index % 2 === 0 ? (
-                    <div className="relative w-full rounded-lg shadow-lg overflow-hidden">
+                    <motion.div 
+                      className="relative w-full rounded-lg shadow-lg overflow-hidden"
+                      variants={fadeInUp}
+                      {...hoverScale}
+                      whileInView={{
+                        y: [50, 0],
+                        opacity: [0, 1],
+                        transition: { duration: 1.2, ease: "easeOut" }
+                      }}
+                      viewport={{ once: true, amount: 0.3 }}
+                    >
                       <img 
                         src={feature.imageSrc}
                         className="rounded-lg w-full h-auto" 
@@ -101,16 +180,29 @@ export default function Home() {
                         width="800" 
                         height="600" 
                       />
-                    </div>
+                    </motion.div>
                   ) : null}
-                  <div className="text-left space-y-4">
+                  <motion.div 
+                    className="text-left space-y-4"
+                    variants={fadeInUp}
+                  >
                     <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl text-black">
                       {feature.title}
                     </h3>
                     <p className="text-gray-600 text-xl">{feature.content}</p>
-                  </div>
+                  </motion.div>
                   {index % 2 === 1 ? (
-                    <div className="relative w-full rounded-lg shadow-lg overflow-hidden">
+                    <motion.div 
+                      className="relative w-full rounded-lg shadow-lg overflow-hidden"
+                      variants={fadeInUp}
+                      {...hoverScale}
+                      whileInView={{
+                        y: [50, 0],
+                        opacity: [0, 1],
+                        transition: { duration: 1.2, ease: "easeOut" }
+                      }}
+                      viewport={{ once: true, amount: 0.3 }}
+                    >
                       <img 
                         src={feature.imageSrc}
                         className="rounded-lg w-full h-auto" 
@@ -118,13 +210,15 @@ export default function Home() {
                         width="800" 
                         height="600" 
                       />
-                    </div>
+                    </motion.div>
                   ) : null}
                 </React.Fragment>
               ))}
-          </div>
+          </motion.div>
         </div>
-      </section> 
-    </main>
+      </motion.section> 
+    </motion.main>
   );
 }
+
+
