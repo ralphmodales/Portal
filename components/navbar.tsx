@@ -9,7 +9,6 @@ const navItems = [
   { name: "Systems", href: "/systems" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
-  { name: "Support", href: "#" },
 ]
 
 export function Navbar() {
