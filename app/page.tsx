@@ -14,25 +14,25 @@ const features = [
   {
     title: 'Comprehensive Leave Management',
     content: "Access and manage employee leave requests across all Popeyes Philippines locations.",
-    imageSrc: "https://i.gifer.com/7gRx.gif",
+    imageSrc: "https://i.pinimg.com/originals/3b/e1/cf/3be1cf74f40ee3cad370e4d0932544f2.gif",
     order: 1
   },
   {
     title: 'Integrated Incident Reporting',
     content: "Centralize incident logging and tracking for all Popeyes Philippines branches.",
-    imageSrc: "https://media1.giphy.com/media/3ohs7J2aQBUeZmMtfG/200.gif?cid=6c09b952f6vxnshzdbmx4nb2j4rivgujnz9rtkorzchulon0&ep=v1_internal_gif_by_id&rid=200.gif&ct=g",
+    imageSrc: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/bbefa799786133.5efa9bf3d1b49.gif",
     order: 2
   },
   {
     title: 'Unified Asset Management',
     content: "Monitor and manage assets across all Popeyes Philippines systems from a single platform.",
-    imageSrc: "https://i.imgur.com/QS9fsMA.gif",
+    imageSrc: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/223e6792880429.5e569ff84ebef.gif",
     order: 3
   },
   {
     title: 'Streamlined Food Ordering',
     content: "Coordinate food orders across all Popeyes Philippines locations through our integrated system.",
-    imageSrc: "https://i.pinimg.com/originals/cc/73/81/cc73813f50a02b766ea5ad4e07cd5433.gif",
+    imageSrc: "https://i.pinimg.com/originals/83/f6/5e/83f65e8c6efc88fabfcfbb11cf63bd8a.gif",
     order: 4
   }
 ];
