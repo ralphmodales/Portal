@@ -106,14 +106,14 @@ export default function Systems() {
 
   const filteredSystems = systems.filter(system => {
     const matchesSearch = system.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         system.description.toLowerCase().includes(searchTerm.toLowerCase());
+      system.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = activeCategory === "all" || system.category === activeCategory;
     return matchesSearch && matchesCategory;
   });
 
   return (
     <div className="flex-1">
-      <section className="w-full bg-gradient-to-b from-white to-gray-50 py-20">
+      <section className="w-full bg-white py-20">
         <div className="container mx-auto">
           <div className="flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-8 items-start">
             <div>
@@ -132,15 +132,15 @@ export default function Systems() {
         </div>
       </section>
 
-      <section className="py-6 w-full bg-gray-50">
+      <section className="py-6 w-full">
         <Carousel setApi={setApi} className="w-full" opts={{ loop: true }}>
           <CarouselContent>
             {systems.map((system, index) => (
               <CarouselItem key={index}>
-                <div className="relative w-full h-[80vh] overflow-hidden">
-                  <img 
-                    src={system.imageUrl} 
-                    alt={system.title} 
+                <div className="relative w-full h-[60vh] overflow-hidden">
+                  <img
+                    src={system.imageUrl}
+                    alt={system.title}
                     className="absolute inset-0 w-full h-full object-cover brightness-50 rounded-xl"
                   />
                   <div className="absolute inset-0 flex flex-col justify-end p-16 text-white">
@@ -155,8 +155,8 @@ export default function Systems() {
                     </p>
                     <div className="flex gap-4 items-center">
                       <Link href={system.link}>
-                        <Button 
-                          variant="outline" 
+                        <Button
+                          variant="outline"
                           className="bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 transition-all"
                         >
                           Explore System
@@ -176,9 +176,8 @@ export default function Systems() {
           {Array.from({ length: count }).map((_, index) => (
             <span
               key={index}
-              className={`h-2 w-2 rounded-full ${
-                index === current - 1 ? "bg-black" : "bg-black/20"
-              }`}
+              className={`h-2 w-2 rounded-full ${index === current - 1 ? "bg-black" : "bg-black/20"
+                }`}
             />
           ))}
         </div>

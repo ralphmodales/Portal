@@ -30,13 +30,13 @@ export default function RootLayout({
             <footer className="w-full py-6 bg-white border-t border-black">
               <div className="container px-4 md:px-6 mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-center">
-                <p className="text-sm">© 2024 Popeyes Philippines. All rights reserved.</p>
+                  <p className="text-sm">© 2024 Popeyes Philippines. All rights reserved.</p>
+                </div>
               </div>
-            </div>
-            </footer> 
+            </footer>
           </div>
         </div>
-        </body>
+      </body>
     </html>
   );
 }
